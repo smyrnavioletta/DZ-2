@@ -14,10 +14,14 @@
 
   <body>
     Робочі дні
-    <div></div>
+    <br />
+    <div class="workday"></div>
+
+    <br />
 
     Вихідні дні
-    <div></div>
+
+    <div class="weekend"></div>
 
     <script>
       /*
@@ -37,6 +41,31 @@
         { name: "Friday", isWorkDay: true },
         { name: "Saturday", isWorkDay: false },
       ];
+
+      
+      let dayname = document.createElement("Sunday");
+      
+      
+      let weekendElement = document.querySelector(".weekend");
+      let workdayElement = document.querySelector(".workday");
+       document.body.append(workdayElement);
+       document.body.append(weekendElement);
+       workdayElement.append(dayname);
+
+           
+
+      let newdays = days.slice();
+      newdays[0] = 0;
+      for (const day of newdays)
+        if (day === false) {
+          document.body.append(weekendElement);
+        }
+     let newdays2 = days.slice();
+      newdays2[0] = 0;
+      for (const day2 of newdays2)
+        if (day2 === true) {
+          document.body.append(workdayElement);
+        }
     </script>
   </body>
 </html>
