@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+
+  <body>
+    <div id="output"></div>
+
+    <script>
+      /*
+        Завдання:
+        Створіть параграфи під кожен елемент масиву days, значення елементів масиву мають бути додані як текст у параграфі.
+        Розмістіть усі створені параграфи в div з id output.
+        */
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      let divElement = document.querySelector("#output");
+      let pText1 = document.createTextNode("Sunday");
+      let pText2 = document.createTextNode("Monday");
+      let pText3 = document.createTextNode("Tuesday");
+      let pText4 = document.createTextNode("Wednesday");
+      let pText5 = document.createTextNode("Thursday");
+      let pText6 = document.createTextNode("Friday");
+      let pText7 = document.createTextNode("Saturday");
+
+      divElement.append(pText1);
+      divElement.append(pText2);
+      divElement.append(pText3);
+      divElement.append(pText4);
+      divElement.append(pText5);
+      divElement.append(pText6);
+      divElement.append(pText7);
+      document.body.append(divElement);
+    </script>
+  </body>
+</html>
