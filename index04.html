@@ -60,6 +60,28 @@
           amount: 100,
         },
       ];
+
+      let table = document.createElement("table");
+      source.forEach(obj => {
+        table.append(createTr(obj.amount, obj.month))
+      });
+
+      document.body.append(table);
+
+      function createTd(value){
+        let td = document.createElement("td");
+        td.textContent = value;
+        return td;
+      }
+      function createTr(td1value, td2value){
+        let tr = document.createElement('tr');
+        tr.append(createTd(td1value));
+        tr.append(createTd(td2value));
+        return tr;
+      }
+
+
+
     </script>
   </body>
 </html>
