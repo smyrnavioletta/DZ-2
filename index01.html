@@ -15,59 +15,78 @@
         Створіть параграфи під кожен елемент масиву days, значення елементів масиву мають бути додані як текст у параграфі.
         Розмістіть усі створені параграфи в div з id output.
         */
-      let days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ];
+      // let days = [
+      //   "Sunday",
+      //   "Monday",
+      //   "Tuesday",
+      //   "Wednesday",
+      //   "Thursday",
+      //   "Friday",
+      //   "Saturday",
+      // ];
 
-      let div = document.querySelector("#output");
+      // let output = document.querySelector("#output");
+      // let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      // days.forEach(day => {
+      //   let p = document.createElement("p");
+      //   p.textContent = day;
+      //   output.append(p);
+      // })
 
-      let pElement = document.createElement("p");
-      let pText1 = document.createTextNode("Sunday");
-
-       pElement.append(pText1);
-      div.append(pElement);
-
-      let pElement1 = document.createElement("p");
-      let pText2 = document.createTextNode("Monday");
+      let output = document.querySelector('#output');
+      let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      days.forEach(day =>{
+        let p = document.createElement('p');
+        p.textContent = day;
+        output.append(p);
+      })
       
-      pElement1.append(pText2);
-      div.append(pElement1);
 
-      let pElement2 = document.createElement("p");
-      let pText3 = document.createTextNode("Tuesday");
 
-      pElement2.append(pText3);
-      div.append(pElement2);
 
-      let pElement3 = document.createElement("p");
-      let pText4 = document.createTextNode("Wednesday");
+      // let div = document.querySelector("#output");
 
-      pElement3.append(pText4);
-      div.append(pElement3);
+      // let pElement = document.createElement("p");
+      // let pText1 = document.createTextNode("Sunday");
 
-      let pElement4 = document.createElement("p");
-      let pText5 = document.createTextNode("Thursday");
+      //  pElement.append(pText1);
+      // div.append(pElement);
 
-      pElement4.append(pText5);
-      div.append(pElement4);
+      // let pElement1 = document.createElement("p");
+      // let pText2 = document.createTextNode("Monday");
+      
+      // pElement1.append(pText2);
+      // div.append(pElement1);
 
-      let pElement5 = document.createElement("p");
-      let pText6 = document.createTextNode("Friday");
+      // let pElement2 = document.createElement("p");
+      // let pText3 = document.createTextNode("Tuesday");
 
-      pElement5.append(pText6);
-      div.append(pElement5);
+      // pElement2.append(pText3);
+      // div.append(pElement2);
 
-      let pElement6 = document.createElement("p");
-      let pText7 = document.createTextNode("Saturday");
+      // let pElement3 = document.createElement("p");
+      // let pText4 = document.createTextNode("Wednesday");
 
-      pElement6.append(pText7);
-      div.append(pElement6);
+      // pElement3.append(pText4);
+      // div.append(pElement3);
+
+      // let pElement4 = document.createElement("p");
+      // let pText5 = document.createTextNode("Thursday");
+
+      // pElement4.append(pText5);
+      // div.append(pElement4);
+
+      // let pElement5 = document.createElement("p");
+      // let pText6 = document.createTextNode("Friday");
+
+      // pElement5.append(pText6);
+      // div.append(pElement5);
+
+      // let pElement6 = document.createElement("p");
+      // let pText7 = document.createTextNode("Saturday");
+
+      // pElement6.append(pText7);
+      // div.append(pElement6);
 
       
 

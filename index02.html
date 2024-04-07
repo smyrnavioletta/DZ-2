@@ -15,13 +15,13 @@
   <body>
     Робочі дні
     <br />
-    <div class="workday"></div>
+    <div id ="workDays"></div>
 
     <br />
 
     Вихідні дні
 
-    <div class="weekend"></div>
+    <div id ="weekendDays"></div>
 
     <script>
       /*
@@ -31,6 +31,9 @@
         Можна внести до розмітки відповідні зміни, щоб спростити завдання пошуку необхідних div.
         Створюйте параграфи за допомогою перебору масиву days. У параграфі поміщайте значення властивості name.
         */
+
+      let workDays = document.querySelector("#workDays");
+      let weekendDays = document.querySelector("#weekendDays");
 
       let days = [
         { name: "Sunday", isWorkDay: false },
@@ -42,30 +45,21 @@
         { name: "Saturday", isWorkDay: false },
       ];
 
-      
-      let dayname = document.createElement("Sunday");
-      
-      
-      let weekendElement = document.querySelector(".weekend");
-      let workdayElement = document.querySelector(".workday");
-       document.body.append(workdayElement);
-       document.body.append(weekendElement);
-       workdayElement.append(dayname);
-
-           
-
-      let newdays = days.slice();
-      newdays[0] = 0;
-      for (const day of newdays)
-        if (day === false) {
-          document.body.append(weekendElement);
+      days.forEach(day => {
+        if (day.isWorkDay){
+          workDays.append(createP(day.name));
+        } else{
+          weekendDays.append(createP(day.name))
         }
-     let newdays2 = days.slice();
-      newdays2[0] = 0;
-      for (const day2 of newdays2)
-        if (day2 === true) {
-          document.body.append(workdayElement);
-        }
+      })
+
+      function createP(text) {
+        let p = document.createElement('p');
+        p.textContent = text;
+        return p;
+      }
+
+
     </script>
   </body>
 </html>
