@@ -62,6 +62,10 @@
         (На минулому уроці були розглянуті приклади, які показують як отримати доступ до батьківських елементів, оскільки
         видаляти потрібно не комірку td, в якій розташоване значення, а рядок tr, в якому розташована ця комірка).
          */
+        let column2td = document.querySelectorAll('td:nth-child(2)');
+        column2td.forEach(td => {
+          if(td.textContent < 100) td.parentElement.remove();
+        })
     </script>
   </body>
 </html>
