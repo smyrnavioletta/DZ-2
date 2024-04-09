@@ -18,6 +18,10 @@
         Завдання:
         Напишіть сценарій, який видалить на сторінці елементи з атрибутом data-remove.
         */
+       let elements = document.querySelectorAll('[data-remove]');
+       for(const el of elements) {
+        el.remove();
+       }
     </script>
   </body>
 </html>
