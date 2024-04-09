@@ -21,6 +21,22 @@
         Завдання:
         Для елементів з атрибутом data-status="expired" зробіть рамку червоного кольору. Для елементів з атрибутом data-status="completed" виведіть рамку зеленого кольору.
         */
+
+        let elements = document.querySelectorAll('[data-status]');
+
+        elements.forEach(el => addBorderStatus(el));
+
+        function addBorderStatus(el) {
+          switch (el.dataset.status) {
+            case 'completed':
+              el.style.border = '1px solid green';                      
+              break;
+            case 'expired':
+              el.style.border = '1px solid red';
+              break;
+          
+          }
+        }
     </script>
   </body>
 </html>
