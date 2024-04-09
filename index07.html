@@ -36,6 +36,25 @@
         Завдання:
         Порахуйте суму значень атрибутів data-value та my-attribute всіх елементів на поточній сторінці та зобразіть її користувачеві.
         */
+       function getSum(attribute){
+        let sum = 0;
+
+        let elements = document.querySelectorAll(`[${attribute}]`);
+
+        elements.forEach(el => {
+          const value = el.getAttribute(attribute);
+          sum += Number(value);
+        })
+
+        return sum;
+       }
+
+       let totalSum = 0;
+       totalSum += getSum('data-value');
+       totalSum +=getSum('my-attribute');
+       console.log(totalSum);
+
+
     </script>
   </body>
 </html>
