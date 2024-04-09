@@ -65,6 +65,17 @@
         Завдання:
         Напишіть сценарій, який додасть клас attention рядкам таблиці, в яких у другій колонці розташовані значення менше ніж 100.
         */
+
+        const tdCollection = document.querySelectorAll('td:nth-child(2)');
+        const tdArray = Array.from(tdCollection);
+
+        tdArray
+        .filter(td => td.textContent < 100)
+        .forEach(td => td.parentElement.classList.add('attention'));
+
+        console.log(tdArray);
+        console.log(tdCollection);
+
     </script>
   </body>
 </html>
