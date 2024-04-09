@@ -27,6 +27,19 @@
         lastName: "Doe",
         age: "25",
       };
+
+      function bindProps(obj) {
+        for (const key in obj) {
+          if (Object.hasOwnProperty.call(obj, key)) {
+            const value = obj[key];
+
+            const element = document.querySelector(`[data-bind=${key}]`);
+            element.textContent = value;
+          }
+        }
+      }
+      bindProps(user);
+      
     </script>
   </body>
 </html>
